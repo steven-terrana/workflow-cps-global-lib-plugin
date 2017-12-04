@@ -112,7 +112,7 @@ public class SCMSourceRetriever extends LibraryRetriever {
             delegate.checkout(run, lease.path, listener, node.createLauncher(listener));
             // Cannot add WorkspaceActionImpl to private CpsFlowExecution.flowStartNodeActions; do we care?
             // Copy sources with relevant files from the checkout:
-            lease.path.copyRecursiveTo("src/**/*.groovy,vars/*.groovy,vars/*.txt,resources/", null, target);
+            lease.path.copyRecursiveTo("src/**/*.groovy,pipeline/*.groovy,pipeline/*.txt,vars/*.groovy,vars/*.txt,resources/", null, target);
         }
     }
 
